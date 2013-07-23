@@ -1,0 +1,70 @@
+
+	
+	
+	
+	
+
+
+        
+                
+        
+
+
+
+
+
+		
+		
+		
+			
+				
+			
+		
+			//Set the 3PC cookie to 1.
+			document.cookie="vmn_3pc=1";
+		
+	
+
+
+	//Scope 1st-party uuid to persist.
+	var uuid_cookie_date = new Date("December 31, 2038");
+
+	var uuid_cookie = "vmn_uuid=d2b4b1dd-9cb4-efa0-8e0e-a44296aa76f2;path=/;";
+	var guid_cookie = "mtvn_guid=d2b4b1dd-9cb4-efa0-8e0e-a44296aa76f2;path=/;";
+	if(uuid_cookie_date){
+		uuid_cookie += "expires="+uuid_cookie_date.toGMTString();
+		guid_cookie += "expires="+uuid_cookie_date.toGMTString();
+	}
+	document.cookie = uuid_cookie;
+	document.cookie = guid_cookie;
+
+
+//Including esivars.html
+
+var vmn_btg_ESIVars = {
+	asnum: "37030",
+	network: "",
+	network_type: "",
+	countryCode: "GH",
+	dma: ""
+};
+
+if(!/vmn_esivars_gacall=1/i.test(document.cookie)){
+	var expy = new Date();
+	var time = expy.getTime() + (7200 * 1000);
+	expy.setTime(time);
+	document.cookie = 'vmn_esivars_gacall=1' + '; expires=' + expy.toGMTString() + '; path=/';
+	
+	
+	var _gaq = _gaq || [];
+	_gaq.push(
+		['mso._setAccount', 'UA-18578264-4'],
+		['mso._setDomainName', 'none'],
+		['mso._setCustomVar',1,'AS Num',vmn_btg_ESIVars.asnum,3],
+		['mso._setCustomVar',2,'Network',vmn_btg_ESIVars.network,3],
+		['mso._setCustomVar',3,'Network Type',vmn_btg_ESIVars.network_type,3],
+		['mso._setCustomVar',4,'Country Code',vmn_btg_ESIVars.countryCode,3],
+		['mso._setCustomVar',5,'DMA',vmn_btg_ESIVars.dma,3],
+		['mso._trackPageview']
+	);
+}

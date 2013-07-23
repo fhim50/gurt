@@ -1,0 +1,1957 @@
+/**	Globals (non-structural)
+==================================== */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+background:url("http://static.ratemyprofessors.com/images/body-bg.gif") repeat-x scroll 0 0 #5CA9DA; font:15px "trebuchet ms",helvetica,arial,sans-serif; }
+
+/*
+body {
+	background: #073158 url(/images/rmp_bkg.png) repeat-x top left;
+	text-align: center; / * for wrap centering * /
+	font: 16px/18px "trebuchet ms", helvetica, arial, sans-serif;
+	padding: 10px 0;
+}
+*/
+
+img {
+	border: none;
+}
+/* these next two fix obnoxious colour variations */ .gecko body {
+	background: #5CA9DA url(http://static.ratemyprofessors.com/images/body-bg.gif) repeat-x top left; } .ie body {
+	background: #5CA9DA url(http://static.ratemyprofessors.com/images/body-bg.gif) repeat-x top left; }
+
+h1,h2,h3,h4,h5 {
+	color: #005295;
+	font-weight: normal;
+}
+h2.outside_box {
+	margin: 0 0 5px 0;
+}
+.highlight {
+	background: #fff468;
+}
+
+
+/* a {
+	padding: 1px;
+}
+a:link,
+a:visited {
+	color: #005295;
+	text-decoration: none;
+}
+a:hover{
+	color: white;
+	background: #005295;
+}
+
+*/
+
+a{ color:#005295; text-decoration:none;}
+a:hover{ text-decoration: none; color:#000;}
+
+#addRating tr td label a{ 
+font: 15px "trebuchet ms",helvetica,arial,sans-serif;
+font-weight: bold;	
+}
+
+
+form ul li {
+	display: inline;
+	margin: 0px;
+}
+ul.options {
+	margin: 0 0 .5em 0;
+	clear: left;
+}
+ul.options li {
+	border-right: 1px solid #005295;
+	padding: 0 5px 0 0;
+	font-size: 90%;
+}
+ul.options li.last {
+	border-right: none;
+	padding: 0;
+}
+.withAds {
+	margin: 0 0 10px;
+}
+.withAds h3 {
+	color: gainsboro;
+	font-weight: bold;
+	text-align: right;
+	font-size: 70%;
+	text-transform: uppercase;
+}
+.withAds a * {
+	margin: 0px;
+	padding: 0px;
+}
+
+.withAds a:hover {
+	background: none;
+}
+
+.basicBorder {
+	/* border: 1px solid #e6e6e6; */
+}
+.basicBox {
+	background: #fff url(/images/rmp_grad240.png) repeat-x bottom left;
+	margin: 0 0 1em;
+}
+.basicBox h3 {
+	color: #555;
+	margin: .5em .5em;
+	text-align: center;
+}
+.basicBox {
+	padding: .2em;
+}
+.basicBox dl {
+	padding: 0 10px;
+}
+.basicBox dt {
+	font-size: 90%;
+	font-weight: bold;
+}
+.basicBox dd {
+	font-size: 80%;
+	margin: 0 0 .8em;
+}
+.basicBox dl {
+	margin: 0 0 20px;
+}
+.basicBox a:link,
+.basicBox a:visited {
+	color: black;
+	font-weight: bold;
+}
+.basicBox p a:link,
+.basicBox p a:visited {
+	color: #005295
+}
+.basicBox p a:hover {
+	color: white;
+	background: #005295;
+}
+.basicBox dl a:hover {
+	color: white;
+}
+.basicBox ol {
+	padding: 0 0 0 25px;
+	margin: 0 0 1em;
+	color: #005295;
+}
+.basicBox ol li {
+	font: .9em/2em "trebuchet ms", helvetica, arial, sans-serif; } .basicBox p {
+	font-size: 80%;
+	text-align: right;
+	margin: -.8em 0 0;
+}
+
+#breadcrumb_links {
+	
+	/*width: 100%;
+	padding: 0 0 20px;
+	font-size: 80%;
+	color: #005295;
+	*/
+	font-size: 12px;
+   	 margin-bottom: 10px;   
+ }
+
+.rmp_tagCloud a {
+	font-weight: bold;
+}
+.rmp_clear {
+	clear: left;
+}
+.inline {
+	display: inline;
+}
+#link_hilite {
+	border:1px solid #000000;
+	background:#00387d;
+	color:#FFFFFF;
+}
+#rss {
+	clear: left;
+	text-align: center;
+	margin: 10px 0;
+	width: 100%;
+	float: left;
+}
+#rss p {
+	display: inline;
+	background: #fff url(/images/site/icons/rssIcon.png) no-repeat 5px center;
+	line-height: 40px;
+	padding: 5px 0;
+	border: 1px solid #dedede;
+}
+#rss p a {
+	color: gray !important;
+	padding: 05px 5px 0px 23px;
+}
+#rss p a:hover {
+	background: none;
+	color: #005295 !important;
+}
+#rss p:hover {
+	border: 1px solid #005295;
+}
+/**	Form Styles
+==================================== */
+/*#rmp_fullPageForm li {
+	margin: 0px;
+}
+#rmp_fullPageForm li label {
+	margin: 0px !important;
+}*/
+#rmp_fullPageForm ul {
+	list-style: none;
+}
+#rmp_fullPageForm li {
+	display: list-item;
+}
+#rmp_fullPageForm input,
+#rmp_fullPageForm textarea {
+	margin: 0 0 20px 20px;
+	display: block;
+}
+#rmp_fullPageForm li li {
+	display: inline;
+	font-size: 80%;
+}
+#rmp_fullPageForm li li input {
+	margin: 0;
+	display: inline;
+}
+#rmp_fullPageForm .fullWidthInputs input, #rmp_fullPageForm .fullWidthInputs textarea {
+	width: 100%;
+}
+/* RMPM-1031*/
+/* #rmp_fullPageForm ul li #contactUs { 
+	background: url("http://static.ratemyprofessors.com/images/rmp-sprite.png") no-repeat scroll -5px -138px transparent;
+	height: 28px;
+	width: 151px;
+	border: medium none;
+	text-indent: -9999px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 15px !important;
+} */
+#addteachers li {
+	display: list-item;
+}
+form .submit {
+	text-align: left;
+	padding: 3px 0;
+}
+/* form .submit input {
+	width: 70% !important;
+	background: #ddd;
+	color: #005295;
+	font-weight: bold;
+	margin: 0px auto;
+	text-align: center !important;
+} */
+/* Account Info Setup Page Styles*/
+
+form li#majorDrpDwn {
+	display: inline;
+}
+form #pmajor_text {
+	border: 1px solid #7F9DB9;
+	display: inline !important;
+}
+form#rmp_fullPageForm li#tchrSect {
+	display: block !important;
+	padding: 5px 0 !important;
+}
+form li#tchrSect div {
+	height: 80px;
+	width: 400px;
+	overflow: auto;
+	overflow-x: hidden;
+	border: 1px solid #7F9DB9;
+}
+ul#join_form {
+	width: 400px;
+}
+ul#join_form li.inline input {
+	display: inline;
+}
+/* Skooled Form Styles*/
+#skooledDrpDwn {
+	padding: 6px;
+	font-weight: bold;
+	color: #000;
+}
+#skooledDrpDwn select {
+	border: 1px solid #00375f;
+	font-size: .9em;
+}
+#skooledDrpDwn input {
+	border: 1px solid #00375f;
+	background: #fff;
+}
+#skooledBio {
+	border-top: 1px solid #ccc;
+	padding: 10px 0;
+}
+#skooledBio img {
+	float: left;
+	margin: 5px 5px 5px 0;
+	border: 1px solid #ccc;
+}
+form.addRating {
+	font: 15px "trebuchet ms",helvetica,arial,sans-serif;
+}
+table#addRating input{
+	display: inline !important;
+}
+.formCat {
+	font-weight: bold;
+	color: #005295;
+	font-size: 12px;
+}
+.formNoLink {
+	font-weight: bold;
+	color: #000000;
+	font-size: 15px;
+}
+/* RMPM-1111 changes */
+#onlinecourseLink{padding-right:85px;}
+#coursetypeLink{padding-right:35px;}
+.onlinecourse,.coursetype{display:inline !important;}
+
+/* Changes for global/computer icon display */
+.openCourse {
+	background: url("http://static.ratemyprofessors.com/images/opencourse.png") no-repeat scroll center center transparent;
+	height: 26px;
+	width: 90px;
+	border: medium none;
+	text-indent: -9999px;
+}
+
+.accreditedCourse {
+	background: url("http://static.ratemyprofessors.com/images/acccourse.png") no-repeat scroll center center transparent;
+	height: 32px;
+	width: 90px;
+	border: medium none;
+	text-indent: -9999px;
+}
+
+/* ================================ **/
+
+/**	Global Structure
+==================================== */
+#rmp_container {
+	margin: 0px auto;
+	width: 996px;
+}
+#rmp_wrap {
+	text-align: left;
+	float: left;
+	background: white;
+	padding: 35px 10px;
+	border-right: 2px solid #0973c9;
+	border-left: 2px solid #0973c9;
+	border-bottom: 2px solid #0973c9;
+	top: -20px;
+}
+.rmp_leaderboard {
+	height: 110px;
+	text-align: center;
+}
+/* commented the font attribute for below style as across RMP site we are using 15px Trebuchet MS for body font */
+#rmp_genericWrap {
+	width: 455px;
+	float: left;
+	/* font: normal 85%/1.4em arial, helvetica, sans-serif ; */
+}
+#rmp_genericWrap h2 {
+	margin: 0 0 20px;
+	font: normal 160%/1.4em "Trebuchet MS", arial, helvetica, sans-serif; 
+}
+
+#siteWrapper #contentWrapper #rmp_genericWrap h2 { color: black; font-size: 20px !important;}
+
+#rmp_genericWrap h3 {
+	font-weight: bold;
+	padding-left: 10px;
+}
+#rmp_genericWrap h3,
+#rmp_genericWrap p,
+#rmp_genericWrap ul,
+#rmp_genericWrap dl {
+	margin: 0 0 10px;
+}
+#rmp_genericWrap p,
+#rmp_genericWrap li {
+  /*font: normal 13px arial, helvetica, sans-serif !important;  */
+}
+.rmp_genericWrap_2{
+	/*width: 455px;*/
+	width: 47.39583333% !important;
+	float: left;
+	font: 15px "trebuchet ms",helvetica,arial,sans-serif !important;
+}
+.rmp_genericWrap_3, .rmp_genericWrap_3 p,.rmp_genericWrap_3 li, div#comment, .rmp_genericWrap_3 table{
+	font: 13px arial,sans-serif ;
+}
+
+.faq, .faq p{
+   font: 15px "trebuchet ms",helvetica,arial,sans-serif !important;
+}
+
+#techissue, #acchelp, #addprof, #addschool, #rateprof, #profinfo, #schoolinfo{
+  font: normal 13px arial, helvetica, sans-serif !important; 
+}
+#rmp_genericWrap li,
+#rmp_genericWrap dt {
+	margin: 0 20px 16px 20px;
+}
+#rmp_genericWrap form {
+	padding-top: 0.5em;
+}
+#rmp_genericWrap form input,
+#rmp_genericWrap form select,
+#rmp_genericWrap form textarea {
+	margin: 0;
+}
+#rmp_genericWrap dd {
+	margin: 0 20px 20px 40px;
+	border-left: 2px solid gainsboro;
+	padding-left: 20px;
+/*	font-size: 90%; */
+	line-height: 130%;
+}
+/* RMPM-968 */
+#ratemycampus ul li {margin:0px;display:block;font-size:12px;}
+/* #ratemycampus .campuslist{margin-left:30px;} */
+/* ================================ **/
+
+/**	Header 
+==================================== */
+#rmp_new_image {
+	position: relative; 
+	background: url(/images/1X56_gradient.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	padding: 0 10px;
+	top: 28px;
+	height: 56px;
+	border-right: 2px solid #0973c9;
+	border-left: 2px solid #0973c9;
+	border-top: 2px solid #0973c9;
+	}
+#rmp_header {
+	float: left;
+	width: 100%;
+	position: relative;
+	top: -20px;
+}
+#rmp_header h1 {
+	 float: left; 
+        width: 459px; 
+        height: 77px; 
+        background: url(/images/rmp_logo04.gif) no-repeat top left; 
+        text-indent: -1000em;
+}
+#rmp_header h1 a {
+	display: block;
+	width: 100%;
+	height: 77px;
+}
+#rmp_header h1 a:hover {
+	background: none;
+}
+/* #rmp_header #rmp_nav */
+#rmp_nav {
+	float: right;
+	width: 458px;
+	height: 74px;
+	background: url(/images/rmp_grad75.png) repeat-x bottom left;
+	position: relative;
+}
+#rmp_nav .gutter {
+	padding: 10px;
+}
+#rmp_nav ul.options {
+	text-align: left;
+}
+#rmp_nav ul {
+	list-style: none outside;
+	width: 100%;
+}
+#rmp_nav ul li {
+	display: inline;
+	margin: 0px;
+	padding: 0 .3em;
+}
+#rmp_nav p {
+	font-size: 70%;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #005295;
+}      
+#rmp_nav p span {
+	font-weight: bold;
+}
+#rmp_nav select {
+	width: 165px;
+}
+/* #rmp_header #rmp_tickerStories */
+#rmp_tickerStories {
+	clear: left;
+	float: left;
+	width: 976px;
+	margin: 10px 0 0;
+	background: url(/images/rmp_grad20.png) repeat-x bottom left;
+	font-size: 80%;
+	overflow: hidden;
+	height: 26px;    
+}
+#rmp_tickerStories li {
+	display: inline;
+}
+#rmp_tickerStories a,
+#rmp_tickerStories a:visited {
+	color: black;  
+	font-weight: bold;
+}
+#rmp_tickerStories a:hover {
+	color: white;
+}      
+#rmp_tickerStories a.story,
+#rmp_tickerStories a.paper {
+	font-weight: bold;
+}
+#rmp_tickerStories a.paper {
+	color: #005295;         
+}
+#rmp_tickerStories a.state {
+	color: #005295;
+}
+#rmp_tickerStories a.paper:hover,
+#rmp_tickerStories a.state:hover {
+	color: white;
+}
+#rmp_tickerStories h3,
+#rmp_tickerStories ul {
+	display: inline;
+	line-height: 26px;
+}
+#rmp_tickerStories h3 {
+	margin: 0 20px 0 5px;
+}         
+#rmp_tickerStories #newsticker {
+	position: relative;
+	display: inline;
+}
+#togglenewsticker {
+	display: none;
+}
+.graphicalLinks {
+	text-align: center;
+	margin: 20px 0 10px 0;
+	/* line-height: 100%; */
+        min-height:82px;
+        max-height:82px;
+}
+
+.graphicalLinks #pagination span{color: #000000;}
+.graphicalLinks #pagination a{color: #000000;}
+
+/* .graphicalLinks a {
+	background: #005295 url(/images/link_bkg.gif) repeat-x top left;
+	color: #fff;
+	margin: 0 15px 0 0;
+	padding: 3px 7px;
+	border: 1px solid #005295;
+	text-align: center;
+	font-size: 1.1em;	
+}
+
+.graphicalLinks a:hover {
+	background: #0876CF;
+}
+*/
+
+#rmp_genericWrap #rmp_notice div {
+	font-size: 100%;
+}
+
+/* ======================== **/
+#rmp_updates div {
+	background: #FFFDC0 url(/images/rmp_noticeBkg.png) repeat-x;
+	clear: left;
+	text-align: center;
+	border: 1px solid #FFF468;
+	margin: 0 0 10px;
+	font-size: 90%;
+	padding: 5px 0;
+}
+
+#rmp_updates div p {
+	display: inline;
+	background: url(/images/site/icons/lightbulb.gif) no-repeat 0 0;
+	padding: 0 0 0 20px;
+	line-height: 20px;
+}
+#rmp_updates div p a:link {
+	text-decoration: underline;
+}
+/* ======================== **/
+
+#rmp_notice div {
+	background: #FFFDC0 url(/images/rmp_noticeBkg.png) repeat-x;
+	clear: left;
+	text-align: center;
+	border: 1px solid #FFF468;
+	margin: 0 0 10px;
+	font-size: 90%;
+	padding: 5px 0;
+}
+#rmp_notice div p {
+	display: inline;
+	background: url(/images/site/icons/lightbulb.gif) no-repeat 0 0;
+	padding: 0 0 0 20px;
+	line-height: 19px;
+}
+#rmp_notice div p a:link {
+	text-decoration: underline;
+}
+#rmp_notice div.vaTech {
+	background: #dafed0 url(/images/rmp_noticeFriendly3Bkg.gif) repeat-x;
+	border-color: #C3FFAB;
+}
+#rmp_notice div.friendly {
+	background:  url(/images/rmp_grad_submit.gif);
+	background-repeat: repeat;
+	background-position: bottom top ;
+	border-color: #b0d12c;
+}
+#rmp_notice div.friendly p {
+	background: url(/images/site/icons/star.png) no-repeat left top; } div.friendly a:hover {
+	background: none;
+	background-color: white;
+}
+div.facebook a:hover
+{
+	background: none;
+	background-color: white;
+}
+#rmp_notice div.vaTech p {
+	background:none;
+	padding: 0 0 0 10px;
+}
+#rmp_notice div.ad {
+	background: none;
+	border-color: #FFFFFF;
+}
+#rmp_notice div.ad p{
+	line-height: 5px;
+	background: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* ================================ **/
+
+/**	Home -- Primary
+==================================== */
+#rmp_home {
+	width: 610px;
+	float: left;
+	margin: 0 0 50px;
+}
+#rmp_home h2 {
+	float: left;
+	margin: 0 30px 0 0;
+	text-align: left;
+	font-size: 160%;
+	padding: 12px 0;
+}
+#rmp_home h2 span {
+	background: #fff468;
+}
+#rmp_tabs {
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: -22px;
+}
+#rmp_tabs ul {
+  	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+#rmp_tabs li {
+	float: left;
+	margin: 0px 5px 0 0;
+	background: url(/images/rmp_homeTabNotSelectedRight.gif) no-repeat right top;
+	font-size: 120%;
+}
+#rmp_tabs li a {
+	display: block;
+	padding: 12px 15px;
+	background: url(/images/rmp_homeTabNotSelectedLeft.gif) no-repeat top left;
+	color: gray;
+}
+/* for Chegg orange tab 8-9-10 */
+#rmp_tabs #tabnavC {background: url(/images/orange-right.png) no-repeat right top;padding: 0 6px 0 0;}
+#rmp_tabs #tabnavC a {background: url(/images/orange-left.png) no-repeat left top;color: #fff;}
+
+#rmp_tabs li a:hover {
+	color: normal;
+	text-decoration: underline;
+}
+#rmp_tabs .selected {
+	background: url(/images/rmp_homeTabSelectedRight.gif) no-repeat right top;
+}
+#rmp_tabs .selected a {
+	background: url(/images/rmp_homeTabSelectedLeft.gif) no-repeat top left;
+	color: #005295;
+}
+/* #rmp_home #rmp_homeFind */
+#rmp_homeFind {
+	float: left;
+	width: 648px;
+	position: relative;
+	margin: 0 0 20px;
+}
+#rmp_homeFind p {
+	font-size: 70%;
+	background: url(/images/site/icons/info.png) no-repeat right 1px;
+	padding: 0 18px 0 400px;
+	line-height: 16px;
+	margin-top: 10px;
+	position: absolute;
+	top: 0px;
+	text-align: right;
+	text-indent: -18px;
+	width: 200px;
+}
+#rmp_homeFind h3 {
+	font-size: 90%;
+	line-height: 220%;
+	color: black;
+	width: 100% !important;    
+	float: left;  
+}
+#rmp_homeFind form {	
+	float: left;
+	height: 65px;
+	width: 100%;
+	background: url(/images/rmp_homeBkg.gif) no-repeat top left;
+	text-align: center;    
+	position: relative;
+	margin-bottom: 5px;
+	z-index: 90;
+}
+#rmp_homeFind form ul {
+	display: inline;
+}
+#rmp_homeFind.homeSchool {
+	background: url(/images/rmp_homeBkgLg.png) no-repeat center bottom;
+}
+#rmp_homeFind.homeSchool img {
+	margin: 1em 0;
+}
+#rmp_homeFind.homeSchool p {
+	background: none;
+	padding: 0;
+}
+#rmp_homeFind.homeSchool form {	
+	background: none;
+}
+/* #rmp_home #rmp_homeFind #rmp_homeMap */
+#rmp_homeMap {
+	text-align: center;
+	background: url(/images/rmp_mapBkg.png) no-repeat left bottom;
+	position: relative;
+	width: 100%;
+	float: left;
+}
+#rmp_homeMap h3 {
+	display: block;
+	width: 100%;
+}
+#rmp_homeMap img {
+	width: 450px;
+	height: 300px;
+	border: 0px;
+	margin: 0 0 30px 0
+}
+#rmp_homeMap form {
+	background: none;
+}
+
+
+#rmp_chooseCountry {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	/* top: 47px; */
+	left: 4px;
+	background: url(/images/rmp_changeCountry.png) no-repeat left top;
+	width: 111px;
+	font-size: 80%;
+	text-align: left;
+	text-indent: 5px;
+	z-index: 100;
+}
+#rmp_chooseCountry li {
+	display: inline;
+	line-height: 21px;
+}
+#rmp_chooseCountry li a {
+	color: #555;
+	width: 111px;
+	height: 21px;
+	display: block;
+}
+#rmp_chooseCountry li a:hover {
+	color: black;
+}
+
+#rmp_chooseCountry li a {
+	background: none;
+}
+#rmp_chooseCountry li.drops {
+	position: relative;
+}
+#rmp_chooseCountry li ul {
+	/* position: absolute; */
+	top: 21px;
+	left: 0px;
+	display: none;
+	width: 111px;
+	list-style: none;
+	border: 1px solid #ccc;
+	border-top: none;
+	background: #f5f5f5;
+	opacity: .80;
+	-moz-opacity: .80;
+	filter:alpha(opacity=80);
+}
+#rmp_chooseCountry li ul li {
+	display: list-item;
+	border-top: 1px solid #ccc;
+}
+#rmp_chooseCountry li ul li a {
+	display: block;
+	width: 100%;
+	margin: 0px;
+}
+#rmp_chooseCountry li ul li a:hover {
+	background: white;
+	width: 109px;
+}
+#rmp_chooseCountry li.selected ul {	
+	display: block;
+}
+#rmp_homeMap #rmp_chooseCountry {
+	left: 5px;
+}
+
+/* #rmp_home #rmp_Sidebar */
+#rmp_Sidebar {
+	width: 302px;
+	float: right;
+	margin-right: -2px;
+}
+#rmp_home .basicBox {
+	margin: 0px;
+}
+/* ================================ **/
+
+/**	Home -- Secondary
+==================================== */
+#rmp_extras {
+	margin: 0 10px;
+}
+.itemModule {
+	margin: 0 0 20px;
+}
+#rmp_extras .itemModule {
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+}
+.itemModule .gutter {
+	padding: 20px;
+}                             
+.itemModule h3 {
+	color: #555;
+	text-align: left;
+	margin: 0 0 20px;
+}
+.itemModule h4 {
+	font-size: 140%;
+}
+.itemModule h4,
+.itemModule h5 {
+	color: black;
+	margin: 0 0 .5em;
+}
+.itemModule h5 {
+	font-weight: bold;
+}
+.itemModule p {
+	margin: 0 0 1em;
+	font-size: 75%;
+	line-height: 110%;
+}
+.itemModule p.more {
+	margin: 0px;
+	text-align: right;
+	text-transform: lowercase;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+.itemModule img {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.itemModule dl img {
+	margin: 0 10px 20px 0;
+}
+.itemModule dt {
+	clear: left;
+}
+.itemModule dd {
+	font-size: 80%;
+	margin: 0 0 10px;
+}
+
+.featured_number {
+   background: #fcfcfc url(/images/rating_bg.gif) bottom left repeat-x;
+   border: 1px solid #d0d0d0;
+   padding: 2px 2px 7px;
+   font-size: 1.2em;
+   color: #3b5998;
+   margin: 3px 2px !important;
+   float: left;
+   display: block;
+   width: 18px;
+}
+
+#rmp_extras2 {
+	margin: 0 10px;
+}
+.itemModule2 {
+	margin: 0 0 20px;
+}
+#rmp_extras2 .itemModule2 {
+	width: 300px;
+	float: left;
+	/*margin-right: 20px;*/
+	margin-right: 0px;
+}
+.itemModule2 .gutter {
+	padding: 20px;
+	background: #FCFFBC;
+}                             
+.itemModule2 h3 {
+	color: #555;
+	text-align: left;
+	margin: 0 0 20px;
+}
+.itemModule2 h4 {
+	font-size: 140%;
+}
+.itemModule2 h4,
+.itemModule2 h5 {
+	color: black;
+	margin: 0 0 .5em;
+}
+.itemModule2 h5 {
+	font-weight: bold;
+}
+.itemModule2 p {
+	margin: 0 0 1em;
+	font-size: 75%;
+	line-height: 110%;
+}
+.itemModule2 p.more {
+	margin: 0px;
+	text-align: right;
+	text-transform: lowercase;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+.itemModule2 img {
+	float: left;
+}
+.itemModule2 dl img {
+	margin: 0 0 0 0;
+}
+.itemModule2 dt {
+	clear: left;
+}
+.itemModule2 dd {
+	font-size: 80%;
+	margin: 0 0 0 0;
+}
+/**************************************************************/
+
+/* The following rules all pertain to sibling classes of .itemModule */
+#rmp_extras .even {
+	margin-right: 0px;
+}
+#rmp_extras2 .even {
+	margin-right: 0px;
+}
+.monster h3 {
+	background: url(/images/rmp_monsterIcon.png) no-repeat 5px 3px;
+	padding: 0 0 0 34px;	
+}
+.hottest h3 {
+	background: url(/images/site/icons/hottness.png) no-repeat 2px 3px;
+	padding: 0 0 0 34px;	
+}
+.higestRated h3 {
+	background: url(/images/site/icons/emoticon_smile.png) no-repeat 4px 3px;
+	padding: 0 0 0 34px;	
+}
+.video h3 {
+	background: url(/images/site/icons/video.png) no-repeat 5px 3px;
+	padding: 0 0 0 34px;	
+}
+.withIconImg dd {
+    margin-left: 34px;
+}
+.withIconImg dt img {
+    width: 24px;
+    height: 24px;
+}
+.mtvU h3 {
+	text-align: center !important;
+}
+.mtvU dd {
+	margin-left: 64px;
+}
+.mtvU dt img {
+	display: inline;
+}
+.mtvU dt a {
+	cursor: hand;
+}
+#rmp_extras .fullWidth {
+	width: 100%;
+}
+
+#rmp_extras2 .fullWidth {
+	width: 100%;
+}
+
+#rmp_Sidebar .spotlight img {
+	width: 100px;
+}
+#rmp_Sidebar .spotlight h3 {
+    background: url(/images/rmp_profSpotlight.png) no-repeat 110px 3px;
+    text-indent: 20px;
+}
+#rmp_extras .spotlight h3,
+#rmp_extras .spotlight h4 {
+	width: 230px;
+	float: left;
+	text-align: left;	
+}
+.spotlight img {
+	width: 180px;
+}
+.spotlight h3 {
+	background: url(/images/rmp_profSpotlight.png) no-repeat 3px 3px;
+	text-indent: 20px;
+}
+.spotlight h4 {
+	line-height: 100%;
+}
+.spotlight li {
+	margin: 0px;
+	font-size: 80%;
+	line-height: 100%;
+	list-style: none;
+}
+#rmp_Sidebar .spotlight ul {
+	margin-left: 110px;
+	margin: .5em 0 0;
+	width: 100%;
+}
+.spotlight p {
+	margin: 20px 20px 0 0;
+	padding: 20px 0 0 220px;
+	font-size: 90%;
+	background: url(/images/rmp_spotlightQuotes.png) no-repeat 200px 10px;
+}
+#rmp_Sidebar .spotlight p {
+	background: url(/images/rmp_spotlightQuotes.png) no-repeat 0px 10px;
+	margin: 0 20px 0 0;
+	padding: 20px 0 0 20px;
+}
+.spotlight span {
+	display: block;
+	text-align: right;
+	font-weight: bold;
+}
+.spotlight li {
+	line-height: 120%;
+}
+.withMtvuImg img {
+	width: 52px;
+	border: 1px solid #b2b2b2;
+}
+
+.withMtvuImg a span {
+    display: block;
+    margin-left: 64px;
+    margin-top: -19px;
+}
+.withMtvuImg a:hover {
+    background: #005295;
+}
+.webkit .withMtvuImg a span {
+    margin-top: 0px;
+}
+
+.withMtvuImg dt {
+    /* remove this if using dds */
+    margin-bottom: 10px;
+}
+
+/* ================================ **/
+
+/** RMP Icons key styles
+==================================== */
+#rmp_key {
+	float: left;
+	background: url(/images/rmp_grad75.png) repeat-x left bottom !important;
+	color: gray;
+	font-size: .8em;
+	margin: 8px 0 15px;
+}
+#rmp_key dl {
+	padding: 10px;
+}
+#rmp_key h5 {
+	font-size: 100%;
+	display: inline;
+	margin: 0 20px 0 0;
+}
+#rmp_key dt {
+	display: inline;
+	padding: 0 3px 0 0;
+}
+#rmp_key dd {
+	font-size: 90%;
+	display: inline;
+	margin: 0 10px 0 0;
+}
+#rmp_key ul {
+	list-style: none;
+	text-align: center;
+	margin-top: 10px;
+}
+#rmp_key li {
+	display: inline;
+	border-right: 1px solid gray;
+	margin-right: 8px;
+	padding-right: 10px;
+}
+#rmp_key li.last {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+#rmp_key li strong{
+	color: #005295;
+	font-size: 120%;
+}
+
+/* Styles for a smaller width key */
+#rmp_key dl.key_smallWidth h5 {
+	padding: 0;
+	margin: 0 1em 0 0;
+}
+#rmp_key dl.key_smallWidth dd, #rmp_key dl.key_smallWidth dt {
+	padding: 0 .5em;
+	margin: 0;
+}
+/* ================================ **/
+
+/** School Info Styles
+==================================== */
+#rmp_leftColumn {
+	width: 162px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+#rmp_leftColumn .itemModule .gutter {
+	padding: 10px;
+}
+#rmp_leftColumn h3 {
+	font-weight: normal;
+	text-align: left;
+	margin: 0 0 5px;
+}
+#rmp_leftColumn .mtvU dd {
+	margin-left: 25px;
+}
+#rmp_leftColumn .mtvU dt {
+margin-bottom: 20px;
+font-size: 90%;
+}
+#rmp_leftColumn .mtvU dt a:hover {
+color:#005295;
+background:none;
+text-decoration: underline;
+}
+#rmp_leftColumn .mtvU img {
+margin: 0px;
+}
+#rmp_leftColumn .mtvU span {
+display: block;
+float: left;
+margin-left:10px;
+width:110px;
+margin-bottom:10px;
+}
+#rmp_schoolPrimary {
+	width: 800px;
+	float: left;
+}
+#rmp_schoolPrimary .withAds {
+	width: 300px;
+	float: left;
+}
+#rmp_schoolInfo {
+	float: left;
+	width: 495px;
+	line-height: 1.4em;
+}
+#rmp_schoolInfo .gutter{
+	background: url(/images/rmp_headingBkg.png) no-repeat left top;
+	padding: 10px;
+	float: left;
+}
+#rmp_schoolInfo .graphicalLinks {
+	margin-left: 90px;
+}
+#rmp_schoolInfo .graphicalLinks a {
+	color: white;
+	float: left;
+}
+
+#rmp_schoolInfo #rss {
+	font-size: 80%;
+}
+
+#rmp_schoolPrimary #rmp_key {
+	width: 485px;
+	margin-left: 20%;
+}
+/* ================================ **/
+
+/** State List
+==================================== */
+#rmp_StateList {
+	width: 490px;
+	float: left;
+}
+
+#rmp_StateList .tell_a_friend {
+	text-align: center !important;
+}
+#rmp_StateList .tell_a_friend a {
+	display: block;
+	width: 16px;
+	height: 14px;
+	background: url(/images/site/icons/email.png) no-repeat top left;
+	text-indent: -1000em;
+	margin: 0 auto;
+}
+/* ================================ **/
+
+
+/** Prof Info Styles
+==================================== */
+#rmp_profPrimary {
+	float: left;
+	width: 800px;
+	margin: 0 0 50px;
+}
+#rmp_profInfo {
+	float: left;
+	width: 475px;
+	line-height: 1.4em;
+	margin: 0 0 20px 0;
+}
+#rmp_profInfo a:link,
+#rmp_profInfo a:hover {
+	color: #005295;
+}
+#rmp_profInfo a:hover {
+	color: white;
+}
+#rmp_profInfo ul {
+	list-style: none;
+}
+#rmp_profInfo h2 {
+	margin: 0 0 .1em;
+}
+#rmp_profInfo .gutter{
+/*	background: url(/images/rmp_headingBkg.png) no-repeat left top;*/
+	float: left;
+	padding: 10px;
+}
+#rmp_profInfo img {
+	float: left;
+	width: 200px;
+	border: 1px solid #005295;
+	margin: 0 .5em 10px 0;
+}
+#rmp_profInfo .graphicalLinks a {
+	margin: 10px 0 0 230px;
+	display: block;
+	color: white;
+	width: 200px;
+}
+#rmp_profPrimary #rmp_key {
+	width: 800px;
+}
+#rmp_profPrimary .withAds {
+	float: right;
+	text-align: right;
+}
+/* #scoreCard {
+	background: url(/images/rmp_headingBkg.png) no-repeat left top;
+	padding: 10px 0px;
+	margin: 0 0 30px;
+	width: 488px;
+	float: left;
+	font-size: 90%;
+}
+
+#scoreCard h4 {
+	font-weight: bold;
+	margin: 0 0 10px 10px;
+}
+#scoreCard li {
+	color: gray;
+	float: left;
+	width: 162px;
+	display: inline;
+	list-style: none;
+	text-indent: 4px;
+}
+#scoreCard li strong {
+	color: black;
+	font-weight: bold;
+}
+
+*/
+
+/* ================================ **/
+
+/** RMP Alphabetical Search Nav styles
+==================================== */
+.rmp_search_nav {
+	float: left;
+	width: 100%;
+	margin: 0 0 20px;
+	line-height: 24px;
+}
+.rmp_search_nav h3 {
+	margin: 0 0 5px;
+}
+.rmp_search_nav ul {
+	margin: 0;
+}
+.rmp_search_nav ul #current, .rmp_search_nav ul #link_hilite {
+	color: #fff;
+	background: #005295;
+}
+.rmp_search_nav ul li {
+	display: inline;
+	list-style: none;
+	font-weight: bold;
+}
+.rmp_search_nav ul li a {
+	background: #f0f7ff;
+	border: 1px solid #005295;
+	color: #005295;
+	padding: 0 3px;
+}
+.rmp_search_nav ul li a:hover,
+.rmp_search_nav ul li #current:hover,
+.rmp_search_nav ul li #link_hilite:hover {
+	padding: 0 3px;
+	color: #000;
+	background: #fff;
+	border: 1px solid #000;
+}
+/* ================================ **/
+
+/** RMP Basic Results Table styles
+==================================== */
+#rmp_table {
+	margin: 10px 0 20px;
+	font-size: .9em;
+	float: left;
+	width: 100%;
+}
+#rmp_table th {
+	color: #005295;
+	border-bottom: 2px solid #005295;
+}
+#rmp_table th a {
+	display: block;
+	width: 90%;
+	line-height: 1.4em;
+}
+#rmp_table th.sorted a {
+	background: #ff9;
+}
+#rmp_table th a:hover {
+	background: #cfc;
+	color: #005295;
+}
+#rmp_table th.sorted a:hover {
+	background: #ff9;
+}
+#rmp_table th.reb a:hover {
+	background: none;
+}
+#rmp_table td {
+	padding: 7px 5px;
+}
+#rmp_table .odd {
+	background: #E1F1FE;
+}
+#rmp_table .icon_col {
+	text-align: center;
+}
+#rmp_table .table_width {
+	width: 20%;
+}
+/* ================================ **/
+
+/** Forum Styles
+==================================== */
+#rmp_forum {
+	
+}
+#rmp_forum h2{
+	margin: 0 0 .5em;
+}
+#rmp_forum h3{
+	background: #fff ;
+	text-indent: 20px;
+	font-size: .9em;
+	margin: 0 0 .5em 0;
+	float: right;
+}
+#rmp_forum h4{
+	font-size: .8em;
+	color: #333;
+}
+#rmp_forum table {
+	width: 100%;
+	background: gainesboro;
+}
+#rmp_forum table table td {
+	padding: 5px;
+}
+#rmp_forum table.forumBkg {
+	background: #eee;
+}
+#rmp_forum table.forum_header {
+	background: #eee;
+	padding: 2px 5px;
+	font-size: .9em;
+}
+#rmp_forum table.forum_header td{
+	padding: 0 5px;
+}
+#rmp_forum .forumCats {
+	background: #666;
+	color: #fff;
+	padding: 5px;
+	font-size: .8em;
+	text-align: center;
+}
+#rmp_forum tr.rowBkg {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+}
+#rmp_forum td.center {
+	text-align: center;
+	font-size: .8em;
+}
+#rmp_forum td.date {
+	text-align: right;
+	font-size: .8em;
+}
+/** End Forum Styles
+==================================== */
+
+
+/** User Account styles
+==================================== */
+div.aac_left form{
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+}
+p.aac_left_title {
+	background: url(/images/site/bullet.png) no-repeat left center;
+	padding: 0 0 0 16px;
+}
+p.aac_left_subinfo {
+	text-indent: 2em;
+}
+div.aac_left_subinfo {
+	margin: 1em 0;
+}
+div.aac_left_subinfo select {
+	display: block;
+}
+#addProf {
+	height:135px;
+	width:370px;
+	overflow:auto;
+	overflow-x: hidden;
+	border:1px solid #7F9DB9;
+}
+#addProf a, #addProf a:hover {
+	color: #000;
+	background: transparent;
+	text-decoration: none;
+}
+/* Tell More Friends Styles - join3.jsp*/
+.arc_text h4 {
+	font-weight: bold;
+}
+.arc_text a {
+	color: #000;
+	font-size: .8em;
+}
+/* input#rating_submit {
+        background:url("http://static.ratemyprofessors.com/images/rmp-sprite.png") no-repeat scroll -209px -141px transparent;
+        border:medium none;
+        border-radius:5px;
+        text-indent:-9999px;
+        height:21px;
+        padding:10px;
+        width:62px !important;
+} */
+/* RMPM-1031 join/joinprof page */
+/* input#rating_submitjoin {
+	display: inline !important;
+	background: url("http://static.ratemyprofessors.com/images/rmp-sprite.png") no-repeat scroll -419px -138px transparent;
+	height: 28px;
+	width: 150px;
+	border: medium none;
+	text-indent: -9999px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 15px !important;
+}*/
+/* RMPM-1031 AddTeacher page */
+/* input#rating_submitteacher {
+	display: inline !important;
+	background: url("http://static.ratemyprofessors.com/images/rmp-sprite.png") no-repeat scroll -5px -211px transparent;
+	height: 27px;
+	width: 151px !important;
+	border: medium none;
+	text-indent: -9999px;
+	margin: 0px;
+	padding: 0px;
+} */
+/* RMPM-1031 AddSchool page */
+/* input#rating_submitschool {
+	display: inline !important;
+	background: url("http://static.ratemyprofessors.com/images/rmp-sprite.png") no-repeat scroll -209px -210px transparent;
+	height: 28px;
+	width: 151px !important;
+	border: medium none;
+	text-indent: -9999px;
+	margin: 0px;
+	padding: 0px;
+} */
+/**	End User Account Styles
+==================================== */
+
+
+/**	Footer
+==================================== */
+#rmp_footer {
+	clear: both;
+	width: auto;
+	text-align: center;
+	margin: 40px 0 0 0;
+}
+#rmp_footer h2 {
+	font-size: 110%;
+	margin: .4em 0 0.4em;
+	color: gainsboro;
+}
+#rmp_footer ul li {
+	display: inline;
+	margin: 0;
+	padding: 0 .5em;
+}
+#rmp_footer p {
+	margin: 1em 0 4em;
+	color: #005295;
+	font-size: 90%;
+}
+#flags {
+	text-align: center;
+	margin: 0 0 1em;
+}
+#flags a img {
+	border: 1px solid black;
+	padding: 0;
+}
+#flags a:hover{
+	background: none;
+}
+#rmp_footer .legal {
+	font-size: 90%;
+	font-weight: bold;
+}
+#rmp_footer .copyright {
+	color: gainsboro;
+}
+/* ================================ **/
+
+#MB_content {
+	height: 410px;
+	overflow: scroll;
+}
+.advertise p a:hover{
+	background: none;
+}
+.reb_prof a {
+	color: #005295;	
+}
+.reb_prof a:link {
+	color: #005295;	
+}
+.reb_prof a:hover {
+	color: white;	
+	background: #005295;
+}
+
+#rmp_professor_insruction { 
+width: 485px; 
+height: 535px;
+border: 1px solid #000;
+position: absolute;
+text-align: left; 
+top: 460px; 
+left: 365px;
+background: white; 
+font-size: 80%; 
+z-index: 1;
+}
+
+#rmp_reb_notice {	
+	width: 565px; 
+	height: 335px;
+	border: 2px solid #0973c9;;
+	position: absolute;
+	text-align: left; 
+	top: 750px; 
+	left: 310px;
+	background: white;
+	font-size: 80%;		
+}
+
+/*****************************************************************/
+/* -- beginning of matt's css -- */
+#rmp2007top50 {
+	width: 646px;
+	text-align: left;
+}
+#rmp2007_top {
+	background: url(/images/2007_top.gif) top left no-repeat;
+}
+#rmp2007_description {
+	width: 335px;
+	float:left;
+}
+#rmp2007_description .gutter {
+	margin: 81px 40px 15px 41px;
+	padding: 0;
+}
+#rmp2007_description h3 {
+	font: bold .9em/1.1em "Lucida Grande",arial,sans-serif;
+	color: #000;
+	padding-bottom: .8em;
+}
+#rmp2007_description h4 {
+	font: bold .8em/1.1em "Lucida Grande",arial,sans-serif;
+	color: #000;
+	padding-bottom: .8em;
+}
+#rmp2007_description p {
+	font-size: .8em;
+	color: #000;
+	padding-bottom: .8em;
+}
+#rmp2007_description li {
+	list-style: none;
+	padding-left: 30px;
+	line-height: 30px;
+}
+#rmp2007_description li#highest {
+	background: url(/images/site/icons/icn_star.gif) center left no-repeat;
+}
+#rmp2007_description li#schools {
+	background: url(/images/site/icons/icn_school.gif) center left no-repeat;
+}
+#rmp2007_description li#hottest {
+	background: url(/images/site/icons/icn_pepper.gif) center left no-repeat;
+}
+#rmp2007_description li#standouts {
+	background: url(/images/site/icons/icn_apple.gif) center left no-repeat;
+}
+
+#rmp2007_list {
+	width: 287px;
+	float:left;
+}
+#rmp2007_list .gutter {
+	margin: 52px 0 0;
+	padding: 0;
+}
+#rmp2007_list li {
+	list-style: none;
+	display: block;
+	padding: 5px;
+}
+#rmp2007_list li.odd {
+	background: #fefefe;
+
+}
+.odd a:hover{
+	cursor: hand;
+}
+.even a:hover{
+	cursor: hand;
+}
+#rmp2007_list li.even {
+	background: #e2e9c8;
+}
+#rmp2007_list a {
+	display: block;
+	background: none;
+}
+#rmp2007_list a:hover .rmp2007_prof {
+	text-decoration: underline;
+}
+#rmp2007_list .list_featured_number {
+	position: relative;
+	top: 6px;
+	left: 0px;
+	background:#FCFCFC url(/images/rating_bg.gif) repeat-x scroll left bottom;
+	border:1px solid #D0D0D0;
+	color:#3B5998;
+	display:block;
+	float:left;
+	font-size:1.2em;
+	width:20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin: auto 8px auto 0;
+}
+#rmp2007_list .rmp2007_prof {
+	display: block;
+	width: 240px;
+	color:#3B5998;
+	float: left;
+}
+#rmp2007_list .rmp2007_school {
+	display: block;
+	width: 240px;
+	float: left;
+	color: #000;
+	font-size: .9em;
+}
+
+.clear {
+	clear: both;
+}
+
+#rmp2007_bottom {
+	background: url(/images/2007_bottom.gif) bottom left no-repeat;
+	padding: 4px 24px 22px;
+	margin: 0;
+	text-align: right;
+}
+
+/* -- end of matt's css -- */
+#CMNHeadlines {
+	float:left; 
+	border: 1px solid #e6e6e6; 
+	height: 128px; 
+	width: 300px;
+}
+#CMNHeadlines th {
+	font: 14px "Trebuchet MS",arial;
+	color: #555555;
+	font-weight: bold;
+	background-color:#e1f1fe;
+}
+#CMNHeadlines a {
+	font: 12px Trebuchet MS,arial; 
+	font-weight: normal; 
+	line-height: 22px; 
+	color: #015293;
+	padding-left: 5px;
+}
+
+#CMNHeadlines a:hover {
+	background: #005295;
+	color: white;
+}
+
+/* --- rmp2007fp --- */
+
+#rmp2007fp {
+}
+
+#rmp2007fp p {
+	font-weight: normal;
+	font-size: 0.8em;
+}
+#rmp2007fp h4 {
+	color: #000;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+#rmp2007fp a {
+	background-color: none;
+}
+#rmp2007fp a:hover {
+	background-color: #fff !important;
+	color: #000;
+	text-decoration: underline;
+}
+
+#rmp2007fp h3 {
+	margin-bottom: 0.5em;
+}
+#rmp2007fp1 {
+	background: url(/images/2col_new_top.gif) top left no-repeat;
+	margin-bottom: 1em;
+	width: 100%;
+}
+#rmp2007fp2 {
+	background: url(/images/2col_top.gif) top left no-repeat;
+	margin-bottom: 1em;
+	width: 100%;
+}
+#rmp2007fp1 .inside,
+#rmp2007fp2 .inside  {
+	width: 100%;
+	background: url(/images/2col_bottom.gif) bottom left no-repeat;
+}
+#rmp2007fp .block {
+	float: left;
+	width: 300px;
+	overflow: hidden;
+}
+#rmp2007fp .block .gutter {
+	padding: 2em;
+}
+
+#rmp2007facebook img,
+#rmp2007strikeback img {
+	border: 0;
+	margin: 1em;
+	border: 1px solid #005295;
+}
+#rmp2007facebooklink {
+	background-image: url(/images/bullet_plus.gif);
+	background-position:  top left;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+#rmp2007strikelink {
+	background-image: url(/images/bullet_arrow.gif);
+	background-position:  top left;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+.rmp_center {
+	text-align: center;
+}
+
+.rating_even{background: #EFEFEF}
+#addRating tr td ul{padding:0;margin:0;height:1em;}
+#addRating tr td{padding:2px 0 5px 10px;vertical-align:top;}
+
+.rating_span{
+	display: block;
+	font: 12px "trebuchet ms",helvetica,arial,sans-serif;
+}
+.rating_span_right{
+        float:right;
+        padding-right:15px;
+        padding-left:0px;
+}
+
+#rmp_fullPageForm #charlimit{display: inline}
+#rmp_fullPageForm ul li {margin: 15px 0px;}
+#url_nostyledown{margin-bottom: 0px !important;}
+#url_nostyleup{margin-top: 0px !important;}
+/* --- RMPM	-1156 --- */
+.list_star { 
+	background: url("http://static.ratemyprofessors.com/wp-content/themes/RMP/images/star.png") no-repeat;
+	padding-left: 30px;
+}		
+
+/* RMPM-1188 style changes for member/schoolAdminIndex  page*/
+#breadcrumb_links_schooladmin {
+font-size: 12px;
+margin: 0 0 10px 20px;
+}
+
+#rmp_genericWrap_schooladmin {
+float: left;
+font: 15px "trebuchet ms",helvetica,arial,sans-serif;
+margin: 0 0 0 20px;
+}
+#rmp_genericWrap_schooladmin h2 {
+color: black;
+font-size: 20px !important;
+font: normal 160%/1.4em "Trebuchet MS", arial, helvetica, sans-serif;
+}
+
+#rmp_genericWrap_schooladmin p{
+    margin: 10px 0 0 0;
+}
+#schoolAdmin{
+margin: 0 0 0 60px;
+}
+#rmp_genericWrap_schooladmin .schoolAdmin {
+margin: 30px 0 30px 0;
+}
