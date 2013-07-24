@@ -1,4 +1,0 @@
-
-loadsuccess=true;
-ssousername='';
-
