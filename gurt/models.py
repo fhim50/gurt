@@ -73,7 +73,7 @@ class Person_Comment(models.Model):
 
 
     
-class Grade_Commet(models.Model):
+class Grade_Comment(models.Model):
     grade = models.ForeignKey(Grade)
     comment = models.CharField(max_length=120,blank=True,null=True)
     created = models.DateTimeField(auto_now=True)
