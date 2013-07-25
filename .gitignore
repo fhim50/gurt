@@ -6,6 +6,8 @@
 # Packages
 *.egg
 *.egg-info
+*.css~
+*.html~
 dist
 build
 eggs
