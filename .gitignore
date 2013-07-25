@@ -37,6 +37,9 @@ nosetests.xml
 # DIRS
 gurtPorject_files/
 dev_files/
+grappelli/
+django/
+somefiles/
 
 
 

@@ -3,6 +3,8 @@ import os
 import dj_database_url
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+ADMIN_MEDIA_PREFIX = '/static/grappelli2/grappelli/'
+GRAPPELLI_ADMIN_TITLE ="Gurt"
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -107,6 +109,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
